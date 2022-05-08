@@ -1,0 +1,7 @@
+{
+    "name": "bamba/diagramme-realisation",
+    "description": "creation des classes a partir du diagramme de class",
+    "type": "projetc",
+    "minimum-stability": "stable",
+    "require": {}
+}
