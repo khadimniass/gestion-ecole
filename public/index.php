@@ -2,14 +2,16 @@
 // show errors when there's
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 // inclure le fichier
-require_once('../models/Personne.php');
-require_once('../models/AC.php');
-require_once('../models/Inscription.php');
-require_once('../models/Professeur.php');
+//auto loading
+/*
+    dependance => toutes les classes externes que l'on
+    peut ajouter dans sons projet pour avoir des
+    fonctionnalites suplémentaires
+*/
+// HUB de dependances : site ou on regroupes toutes dependances du langages
+/*
+ * logiciel
+ * */
 
-$professeur = new Professeur();
-
-var_dump($professeur);
+/****************************************************************************************/

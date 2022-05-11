@@ -1,5 +1,5 @@
 <?php
-
+namespace App\Models;
  class Etudiant extends User {
     private string $maticule;
     private string $sexe;

@@ -1,5 +1,6 @@
 <?php
-
+namespace App\Core;
+require_once ('IModel.php');
 class Model implements IModel
 {
     protected static string $table;
@@ -17,28 +18,31 @@ class Model implements IModel
 
     public static function delete(int $id): int
     {
-        $sql = "delete from".self::$table."where id = $id";
         // TODO: Implement delete() method.
+        $sql = "delete from".self::$table."where id = $id";
+        echo $sql;
         return 0;
     }
 
     public static function findAll(): array
     {
-        $sql = "SELECT * FROM '".self::$table."'";
         // TODO: Implement findAll() method.
+        $sql = "SELECT * FROM '".self::$table."'";
+        echo $sql;
         return [];
     }
 
     public static function findById(int $id): object|null
     {
-        $sql = "select * from".self::$table."where id = $id";
         // TODO: Implement findById() method.
+        $sql = "select * from".self::$table."where id = $id";
+        echo $sql;
         return null;
     }
 
     public static function findBy(string $sql, array $data = null, bool $single = false): object|null|array
     {
-        // TODO: Implement findBy() method.
         return null;
+        //TODO: Implement findBy() method.
     }
 }

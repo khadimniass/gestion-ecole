@@ -1,4 +1,5 @@
 <?php
+namespace App\Models;
 class Inscription extends Model {
     //attrubuts d'instance
     //attrubuts de class

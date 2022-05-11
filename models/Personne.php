@@ -1,5 +1,7 @@
 <?php
-abstract class Personne extends Model {
+namespace App\Models;
+require_once ('../core/Model.php');
+abstract class Personne extends Model{
     //atrubut d'instances
     protected int $id;
     protected string $nomComplet;

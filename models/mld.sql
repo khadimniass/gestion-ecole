@@ -33,8 +33,8 @@ create  TABLE personne
 );
 --type de requete
 -- : mise a jour
-    insert
-    ,update
-    ,delete
+        insert
+        update
+        delete
 -- : non mise a jour; retour des donnees :> objet | tableau
     ,select

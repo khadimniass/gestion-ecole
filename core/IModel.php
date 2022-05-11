@@ -1,6 +1,12 @@
 <?php
 //une interface ne contient que des methodes abstraites
 //Pour eviter d'implementer toutes les methodes de l'Interface il faut creer une classe d'implémentation
+//interface contient que des methodes abstraites
+//methodes static ne peut utiliser ques des atrrubuts static
+//methodes d'instance peut utiliser des atrrubuts static
+
+namespace App\Core;
+
 interface IModel
 {
 //abstract

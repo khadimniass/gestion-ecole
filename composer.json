@@ -1,7 +1,19 @@
 {
     "name": "bamba/diagramme-realisation",
-    "description": "creation des classes a partir du diagramme de class",
-    "type": "projetc",
-    "minimum-stability": "stable",
-    "require": {}
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\Core\\": "Core",
+            "App\\Models\\": "Models",
+            "App\\controller\\" : "Controller"
+        }
+    },
+    "authors": [
+        {
+            "name": "Khadim NIass",
+            "email": "niassssn@gmail.com"
+        }
+    ],
+    "require": {
+    }
 }

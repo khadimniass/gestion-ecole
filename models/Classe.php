@@ -1,4 +1,5 @@
 <?php
+namespace App\Models;
 class Classe extends Model {
     //fonctions navigationnelles
     /*ManyToMany avec Professeur*/
