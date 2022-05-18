@@ -1,17 +1,13 @@
 <?php
 // show errors when there's
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-// inclure le fichier
-//auto loading
-/*
-    dependance => toutes les classes externes que l'on
-    peut ajouter dans sons projet pour avoir des
-    fonctionnalites suplémentaires
-*/
-// HUB de dependances : site ou on regroupes toutes dependances du langages
-/*
- * logiciel
- * */
+ini_set('display_errors', true);
+ini_set('display_startup_errors', true);
 
-/****************************************************************************************/
+require_once "../core/Constantes.php";
+require_once Constantes::ROOT()."/core/fonctions.php";
+require Constantes::ROOT().'/vendor/autoload.php';
+require_once Constantes::ROOT()."/routes/routes.web.php";
+//resolve() in Router => Errors
+
+// les boffeur en php correspond au ob_start() && ob_get_clean()
+//note dans router , instanciation du controller

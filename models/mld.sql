@@ -29,7 +29,8 @@ create  TABLE personne
     password varchar (100),
     matricule varchar (50) unique,
     adresse text,
-    sexe varchar(1)
+    sexe varchar(1),
+    grade varchar(25)
 );
 --type de requete
 -- : mise a jour
@@ -38,3 +39,4 @@ create  TABLE personne
         delete
 -- : non mise a jour; retour des donnees :> objet | tableau
     ,select
+INSERT INTO personne (nom_complet,role,grade) VALUES ("baila wane","ROLE_PROFESSEUR","ingenieur");

@@ -1,16 +1,17 @@
 <?php
 namespace App\Models;
+use App\Core\Model;
 class Classe extends Model {
+    private int $id;
     //fonctions navigationnelles
     /*ManyToMany avec Professeur*/
     public function __construct()
     {
-        self::$table="classe";
-    }
 
-    public function professeurs():array
+    }
+    public function professeurs():array|null
     {
-        return  [];
+        $sql = "";
+        return parent::findBy($sql,$this->id);
     }
-
 }

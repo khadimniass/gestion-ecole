@@ -1,11 +1,11 @@
 {
     "name": "bamba/diagramme-realisation",
-    "type": "project",
     "autoload": {
         "psr-4": {
-            "App\\Core\\": "Core",
-            "App\\Models\\": "Models",
-            "App\\controller\\" : "Controller"
+            "App\\Core\\": "core/",
+            "App\\Models\\": "models/",
+            "App\\Controller\\" : "controllers/",
+            "App\\Exception\\" : "exceptions/"
         }
     },
     "authors": [

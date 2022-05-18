@@ -7,7 +7,7 @@ namespace App\Models;
 
     public function __construct()
     {
-        self::$role="ROLE_ETUDIANT";
+        parent::$role="ROLE_ETUDIANT";
     }
 
      /**
@@ -57,5 +57,27 @@ namespace App\Models;
      {
          $this->adresse = $adresse;
      }
+     public function insert(): int
+     {
+         $sql = "INSERT INTO `". parent::table() ."` (`nom_complet`,`role`,`adresse`,`sexe`,`login`,`password`,`matricule`) VALUES (?,?,?,?,?,?,?)";
+         $db=parent::database();
+         $db->connexionBD();
+        // dd($this->generateurMatricule());
 
+         $result=$db->executeUpdate($sql,[$this->nomComplet,parent::$role,$this->adresse,$this->sexe,$this->login,$this->password,$this->generateurMatricule()]);
+         $db->closeConnexion();
+         return $result;
+     }
+     public static function findAll(): array
+     {
+         $sql = "SELECT * FROM ".parent::table()." WHERE role like 'ROLE_ETUDIANT'";
+         return parent::findBy($sql,[]);
+     }
+
+     public function generateurMatricule()
+     {
+         $nom=explode(" ",$this->getNomComplet());
+         $nom="PO4".strtoupper($nom[count($nom)-1]).rand(1,1000);
+         return $nom;
+     }
 }
