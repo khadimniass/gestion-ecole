@@ -4,6 +4,7 @@ use App\Core\Router;
 use App\Controller\{UserController ,EtudiantController ,ACController, RP ,SecurityController, ClasseController, PersonneController, HomeController, ProfesseurController};
 
 $router = new Router();
+
 $router->addRoute("/",[HomeController::class,"home"]);
 $router->addRoute("/login",[SecurityController::class,"authentification"]);
 $router->addRoute("/logout",[SecurityController::class,"deconnexion"]);

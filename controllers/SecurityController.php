@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Core\Controller;
+use App\Models\User;
 
 class SecurityController extends Controller
 {
@@ -11,15 +12,22 @@ class SecurityController extends Controller
         if ($this->request->isGet()){
             $this->render("security/login");
         }elseif ($this->request->isPost()){
-                echo "traitement du formulaire de connexion ...";
-                extract($_POST);
-                dd($_POST);
+            extract($_POST);
+            $user=User::findUserByLoginPassword($username,$password);
+            if ($user){
+                $_SESSION['user_connect']=$user;
+                return $this->redirectToRoute("listerEtudiant");
+            }else{
+                echo "<h3 class='alert alert-warning'> Invalides cridentials </h3>";
+                $this->redirectToRoute("login");
+            }
         }
     }
 
     public function deconnexion()
     {
-       // echo "je suis dans le controller Security et action deconnexion";
-        $this->redirectToRoute("logout");
+        //echo "je suis dans le controller Security et action deconnexion";
+        unset($_SESSION['user_connect']);
+        $this->redirectToRoute("login");
     }
 }

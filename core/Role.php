@@ -12,7 +12,7 @@ class Role
 
     public function isConnect():bool
     {
-        return 0;
+        return isset($_SESSION['user_connect']);
     }
 
     public function isRP():bool

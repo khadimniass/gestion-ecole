@@ -29,12 +29,11 @@ class EtudiantController extends Controller
             $etudiant->setSexe($sexe);
             $etudiant->setLogin($login);
             $etudiant->setPassword($password);
-            echo "dans le controller etudiant <br>";
-            dd($etudiant);
+            //echo "dans le controller etudiant <br>";
+            //dd($etudiant);
             if ($password==$password2) {
-                dd($this->redirectToRoute("/listerEtudiant"));
-               // $etudiant->insert();
-                $this->redirectToRoute("listerEtudiant");
+                $etudiant->insert();
+                $this->redirectToRoute("/listerEtudiant");
             }else{
                 echo "les deux mots de passes ne sont pas conformes";
             }

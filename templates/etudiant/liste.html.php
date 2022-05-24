@@ -20,7 +20,7 @@
                 <td><?= $etud->login ?></td>
                 <td><?= $etud->adresse ?></td>
                 <td><?= $etud->matricule ?></td>
-                <td><?= $etud->sexe ?></td>
+                <td><?= $etud->sexe?></td>
 
                 <td class="text-center">
                     <button class="btn btn-primary btn-sm ">modifier</button>

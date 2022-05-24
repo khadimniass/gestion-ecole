@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Core;
-use App\Core\Request;
 class Controller
 {
     protected Request $request;
@@ -21,6 +20,6 @@ class Controller
     }
     public function redirectToRoute($uri)
     {
-        return header("location".\Constantes::WEB_ROOT.$uri);
+        header("location:".\Constantes::WEB_ROOT.$uri);
     }
 }

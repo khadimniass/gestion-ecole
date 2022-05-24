@@ -24,12 +24,12 @@
             <form action="/login" method="POST">
               <!-- Email input -->
               <div class="form-outline mb-4">
-                <input name="username" value="exemple@gmail.com" type="email" placeholder="votre email" id="form3Example3" class="form-control" />
+                <input name="username" value="adamae@gamil.com" type="email" placeholder="votre email" id="form3Example3" class="form-control" />
                 <label class="form-label" for="form3Example3">Email address</label>
               </div>
               <!-- Password input -->
               <div class="form-outline mb-4">
-                <input value="passer" name="password" type="password" placeholder="votre mot de pass" id="form3Example4" class="form-control" />
+                <input value="adama123" name="password" type="password" placeholder="votre mot de pass" id="form3Example4" class="form-control" />
                 <label class="form-label" for="form3Example4">Password</label>
               </div>
               <button type="submit" class="btn btn-primary btn-block mb-4">

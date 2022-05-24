@@ -15,7 +15,6 @@ class Session
     {
         return $this->user;
     }
-
     /**
      * @param User $user
      */
@@ -38,5 +37,10 @@ class Session
     public function get(string $key)
     {
         return $_SESSION[$key];
+    }
+
+    public function getRole()
+    {
+        return $_SESSION['user_connect']['role'];
     }
 }

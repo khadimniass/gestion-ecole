@@ -27,11 +27,11 @@ class Router
         if (isset($this->routes[$uri])){
             $route = $this->routes[$uri];
             //Opération de destruction en php(8) : ça permet de faire affectation
-            [$ctrClass, $action]=$this->routes[$uri]; // => $ctrClass = $route[0]; $action = $route[1]
+            [$ctrClass, $action]=$route; // => $ctrClass = $route[0]; $action = $route[1]
             if (class_exists($ctrClass)&& method_exists($ctrClass,$action)){
                 $clt = new $ctrClass($this->request);
                 call_user_func(array($clt, $action));
-            }else{
+            } else{
                 throw new ControllerNotFoundException();
             }
         }else{
